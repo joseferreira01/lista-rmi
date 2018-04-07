@@ -36,6 +36,8 @@ public class ResolveOp2 extends UnicastRemoteObject implements Calculadora
 
     @Override
     public double op2(double x, double y) throws RemoteException {
+        if(y==0)
+            new RemoteException("Nao e possivel efetuar divisao por 0s");
         return (2*x)/y;
     }
     
